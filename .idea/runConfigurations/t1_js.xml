@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="t1.js" type="NodeJSConfigurationType" path-to-node="$APPLICATION_CONFIG_DIR$/node/versions/24.11.0/node" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mod-01/teht-01/t1.js" working-dir="$PROJECT_DIR$/mod-01/teht-01">
+    <method v="2" />
+  </configuration>
+</component>
