@@ -1,8 +1,8 @@
 'use strict';
 
-const dice_number = parseInt(prompt('Enter dice number'));
+const dice_number = parseInt(prompt('How many dice?'));
 
-const eye_sum = parseInt(prompt('Enter eye sum'));
+const eye_sum = parseInt(prompt('Enter wanted eye sum'));
 
 let i = 0
 
@@ -26,5 +26,7 @@ while (i <= 10_000) {
 }
 
 const probability = sums_list.length / 10_000
-console.log(probability)
-message.textContent = 'Probability of the sum ' + eye_sum.toString + ' with ' + dice_number.toString + ' dice is ' + probability.toString()
+const probability_percentage = probability * 100
+console.log(probability_percentage)
+const message = document.querySelector('#message');
+message.textContent = 'Probability of the sum ' + eye_sum + ' with ' + dice_number + ' dice is ' + probability_percentage + '%';
