@@ -94,6 +94,8 @@ const picArray = [
 
 // add your code here
 const section = document.querySelector('section');
+const dialog = document.querySelector('dialog');
+
 
 picArray.forEach(pic => {
   const article = document.createElement('article');
@@ -115,10 +117,20 @@ picArray.forEach(pic => {
   const p = document.createElement('p');
   p.textContent = pic.description
 
+  const bigImg = document.createElement('img')
 
     article.appendChild(heading);
     article.appendChild(figure);
     article.classList.add('card')
     article.appendChild(p);
   section.appendChild(article);
+  section.appendChild(dialog);
+  dialog.appendChild(bigImg)
+
+  article.addEventListener('click', function() {
+      bigImg.src = pic.image.large
+      bigImg.alt = 'big image'
+      dialog.showModal();
+
+  });
 });
