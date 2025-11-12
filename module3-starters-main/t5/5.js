@@ -93,9 +93,9 @@ const picArray = [
 ];
 
 // add your code here
-const section = document.querySelector('section');
-
 picArray.forEach(pic => {
+  const section = document.querySelector('section');
+
   const article = document.createElement('article');
 
   const heading = document.createElement('h2');
@@ -115,10 +115,9 @@ picArray.forEach(pic => {
   const p = document.createElement('p');
   p.textContent = pic.description
 
-
-    article.appendChild(heading);
-    article.appendChild(figure);
-    article.classList.add('card')
-    article.appendChild(p);
+  article.appendChild(heading);
+  article.appendChild(figure);
+  article.classList.add('card')
+  article.appendChild(p);
   section.appendChild(article);
 });
