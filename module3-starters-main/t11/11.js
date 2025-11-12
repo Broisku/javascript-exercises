@@ -95,7 +95,6 @@ const picArray = [
 // add your code here
 picArray.forEach(pic => {
   const section = document.querySelector('section');
-  const dialog = document.querySelector('dialog');
 
   const article = document.createElement('article');
 
@@ -123,11 +122,17 @@ picArray.forEach(pic => {
   section.appendChild(article);
 
   article.addEventListener('click', function() {
-    const bigImg = document.querySelector(dialog.img)
-    bigImg.src = pic.image.large
-    bigImg.alt = 'big image'
-    dialog.appendChild(bigImg)
+    const dialog = document.querySelector('dialog');
+    const bigImg = document.querySelector('dialog img');
+    bigImg.setAttribute('src', pic.image.large);
+    bigImg.setAttribute('alt', 'big image');
     dialog.showModal();
 
+    const close_button = dialog.querySelector('span');
+    close_button.style.cursor = 'pointer';
+    close_button.addEventListener('click', function() {
+      dialog.close();
+
+    });
   });
 });
